@@ -2,6 +2,8 @@
  * How to ?
  */
 
+const _ = require('lodash')
+
 const args = process.argv.slice(2)
 
 function printUsage () {
