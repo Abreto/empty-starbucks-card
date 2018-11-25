@@ -42,6 +42,22 @@ raws.forEach(raw => {
   }
 })
 
-const result = require('./lib/dp')(items, banlance, minToPay)
+const groups = _.groupBy(items, 'price')
+const prices = _.uniq(items.map(item => item.price))
 
-console.log(result)
+const result = require('./lib/dp')(prices, banlance, minToPay)
+
+console.log(`当卡余额为 ${banlance} 时，最少需充值 ${result.answer * minToPay} 元才能恰好用完`)
+console.log('参考使用方案：')
+result.seq.forEach(price => {
+  let str
+  if (price < 0) {
+    str = `充值 ${-price} 元`
+  } else {
+    str = `消费 ${price} 元:`
+    groups[price].forEach(item => {
+      str += ' ' + item.name
+    })
+  }
+  console.log(str)
+})
