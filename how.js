@@ -42,4 +42,6 @@ raws.forEach(raw => {
   }
 })
 
-console.log(items)
+const result = require('./lib/dp')(items, banlance, mintopay)
+
+console.log(result)
