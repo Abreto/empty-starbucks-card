@@ -1,0 +1,27 @@
+{
+  "name": "empty-starbucks-card",
+  "version": "0.1.0",
+  "description": "已知每种商品的价格，给定预付卡的余额和每次最少充值金额，计算最少需要充值多少钱可以刚好把预付卡的余额花完",
+  "main": "how.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abreto/empty-starbucks-card.git"
+  },
+  "author": "Abreto Fu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Abreto/empty-starbucks-card/issues"
+  },
+  "homepage": "https://github.com/Abreto/empty-starbucks-card#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
