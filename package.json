@@ -4,7 +4,7 @@
   "description": "已知每种商品的价格，给定预付卡的余额和每次最少充值金额，计算最少需要充值多少钱可以刚好把预付卡的余额花完",
   "main": "how.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint . --fix"
   },
   "repository": {
     "type": "git",
