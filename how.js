@@ -2,8 +2,6 @@
  * How to ?
  */
 
-const path = require('path')
-
 const args = process.argv.slice(2)
 
 function printUsage () {
@@ -18,7 +16,7 @@ if (args.length !== 3) printUsage()
 
 const itemjson = args[0]
 const banlance = parseInt(args[1])
-const mintopay = parseInt(args[2])
+const minToPay = parseInt(args[2])
 
 const raws = require(itemjson)
 
@@ -42,6 +40,6 @@ raws.forEach(raw => {
   }
 })
 
-const result = require('./lib/dp')(items, banlance, mintopay)
+const result = require('./lib/dp')(items, banlance, minToPay)
 
 console.log(result)
