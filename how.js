@@ -47,7 +47,11 @@ const prices = _.uniq(items.map(item => item.price))
 
 const result = require('./lib/dp')(prices, banlance, minToPay)
 
-console.log(`当卡余额为 ${banlance} 时，最少需充值 ${result.answer * minToPay} 元才能恰好用完`)
+if (result.answer > 0) {
+  console.log(`当卡余额为 ${banlance} 时，最少需充值 ${result.answer * minToPay} 元才能恰好用完`)
+} else {
+  console.log(`✨ 您不需要额外充值任何金额即可恰好花光 ${banlance} 元`)
+}
 console.log('参考使用方案：')
 result.seq.forEach(price => {
   let str
