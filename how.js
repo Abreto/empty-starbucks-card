@@ -21,7 +21,7 @@ const banlance = parseInt(args[1])
 const minToPay = parseInt(args[2])
 
 const raws = require(itemjson)
-console.log(raws)
+// console.log(raws)
 const items = []
 
 raws.forEach(raw => {
